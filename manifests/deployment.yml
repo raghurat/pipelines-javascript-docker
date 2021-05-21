@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: raghuratpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: raghuratpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: raghuratpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: raghuratpipelinesjavascriptdocker 
+          image: azdevopsdem.azurecr.io/raghuratpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
